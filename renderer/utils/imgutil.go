@@ -31,9 +31,9 @@ func (img *ImageWrapper) WriteImage(path string) {
 
 func (img *ImageWrapper) Paint(x int, y int, v *core.Point3)  {
 	img.Img.Set(x, y, color.RGBA{
-		R: uint8(v.AtVec(0)),
-		G: uint8(v.AtVec(1)),
-		B: uint8(v.AtVec(2)),
+		R: uint8(v.X),
+		G: uint8(v.Y),
+		B: uint8(v.Z),
 		A: 0xff,
 	})
 }

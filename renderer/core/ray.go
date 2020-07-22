@@ -15,8 +15,6 @@ func NewRay(origin *Vec3, direction *Point3) *Ray {
 }
 
 func (ray *Ray) At(t float64) *Point3 {
-	var ret Point3
-	ret.AddScaledVec(ray.Origin, t, ray.Direction)
-	return &ret
+	return AddScaledV(ray.Origin, ray.Direction, t)
 }
 
